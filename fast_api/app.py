@@ -4,7 +4,9 @@ from routers import posts
 
 app = FastAPI(prefix="/")
 
-app.include_router(posts.router, prefix="/post")
+app.include_router(posts.router, prefix="/flow")
+
+
 @app.get('/')
 def get_hello():
     return {'message': 'Hello from FastAPI Server!'}
